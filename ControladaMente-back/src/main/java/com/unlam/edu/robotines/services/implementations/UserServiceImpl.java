@@ -26,7 +26,7 @@ public class UserServiceImpl implements IUserService {
     }
 
     public UserDto getUser(Long id) {
-        return UserMapper.toDto(this.repository.findById(id).orElseThrow());
+        return UserMapper.toDto(this.repository.findById(id).orElseThrow(null));
     }
 
     public UserDto register(UserDto user) {
